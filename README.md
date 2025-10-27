@@ -1,3 +1,4 @@
+````markdown
 # 🧠 Dynamic Allocation Simulator  
 A Python-based optimisation engine demonstrating AI-driven decision logic for operational resource allocation.
 
@@ -33,40 +34,53 @@ The simulator applies classification logic (adapted from an image classifier) to
 ```python
 df['normalised_load'] = (df['current_load'] - df['current_load'].min()) / (df['current_load'].max() - df['current_load'].min())
 features = np.array(df[['normalised_load', 'distance', 'priority']])
+````
 
-⚙️ Allocation Engine (Model Architecture)
+---
 
-Adapted the original classifier to output the most efficient allocation for each task.
+### ⚙️ Allocation Engine (Model Architecture)
 
-Softmax probabilities represent resource options; argmax picks the best resource.
+* Adapted the original classifier to output the most efficient allocation for each task.
+* Softmax probabilities represent resource options; `argmax` picks the best resource.
 
+```python
 prediction = model.predict(task_features)
 best_resource = np.argmax(prediction)
+```
 
-📊 KPI Definition & Model Optimisation
+---
 
-Accuracy → Allocation Accuracy
+### 📊 KPI Definition & Model Optimisation
 
-Loss → Operational Inefficiency
+* **Accuracy →** Allocation Accuracy
+* **Loss →** Operational Inefficiency
+* **Custom KPIs:** throughput, idle-time reduction, decision latency
 
-Custom KPIs: throughput, idle-time reduction, decision latency
+---
 
-📈 Evaluation & Visualisation
+### 📈 Evaluation & Visualisation
 
-Matplotlib used to visualise performance improvement.
+* **Matplotlib** used to visualise performance improvement.
+* Compared manual vs. AI-based allocation performance.
 
-Compared manual vs. AI-based allocation performance.
+---
 
-📊 Key Results (Simulation)
-KPI	Description	Improvement
-Allocation Accuracy	Correct resource–task pairing ratio	87%
-Idle Time Reduction	Decrease in unused resource hours	15%
-Throughput Efficiency	Increase in tasks completed per cycle	+12%
-Decision Latency	Average allocation time	0.2 s / batch
+## 📊 Key Results (Simulation)
 
-Replace with your actual results after running Notebook 3.
+| KPI                   | Description                           | Improvement       |
+| --------------------- | ------------------------------------- | ----------------- |
+| Allocation Accuracy   | Correct resource–task pairing ratio   | **87%**           |
+| Idle Time Reduction   | Decrease in unused resource hours     | **15%**           |
+| Throughput Efficiency | Increase in tasks completed per cycle | **+12%**          |
+| Decision Latency      | Average allocation time               | **0.2 s / batch** |
 
-🧱 Repository Structure
+> *Replace with your actual results after running Notebook 3.*
+
+---
+
+## 🧱 Repository Structure
+
+```bash
 dynamic-allocation-simulator/
 ├─ notebooks/
 │  ├─ 1_data_preparation.ipynb          # Data preprocessing (from original utility.py)
@@ -85,40 +99,50 @@ dynamic-allocation-simulator/
 │  └─ allocation_heatmap.png             # Utilisation heatmap
 ├─ data/                                 # Synthetic or real datasets
 └─ README.md
+```
 
-🧰 Tech Stack
-Category	Tools & Libraries
-Programming	Python 3, Jupyter Notebook
-Data Handling	NumPy, pandas
-Visualisation	Matplotlib
-Modelling	Neural-network-based classifier adapted for optimisation logic
-📈 Visual Outputs
+---
 
-Export the following to the visuals/ directory:
+## 🧰 Tech Stack
 
-performance_comparison.png – Bar chart showing manual vs. AI allocation efficiency
+| Category      | Tools & Libraries                                              |
+| ------------- | -------------------------------------------------------------- |
+| Programming   | Python 3, Jupyter Notebook                                     |
+| Data Handling | NumPy, pandas                                                  |
+| Visualisation | Matplotlib                                                     |
+| Modelling     | Neural-network-based classifier adapted for optimisation logic |
 
-allocation_heatmap.png – Heatmap of resource utilisation across time
+---
 
-Use the Matplotlib plots generated in Notebook 3.
+## 📈 Visual Outputs
 
-🧩 Insights & Impact
+Export the following to the `visuals/` directory:
 
-Demonstrates the transferability of AI models from perception tasks (image recognition) to decision-support systems.
+* `performance_comparison.png` – Bar chart showing manual vs. AI allocation efficiency
+* `allocation_heatmap.png` – Heatmap of resource utilisation across time
 
-Proves capability in data modelling, KPI definition, and algorithmic optimisation — critical for Technical Product Managers.
+> *Use the Matplotlib plots generated in Notebook 3.*
 
-Serves as a foundation for extending into real-time DAS simulation with APIs or live dashboards.
+---
 
-🚀 Future Enhancements
+## 🧩 Insights & Impact
 
-Integrate Google OR-Tools or PuLP for linear programming optimisation.
+* Demonstrates the **transferability** of AI models from perception tasks (image recognition) to decision-support systems.
+* Proves capability in **data modelling**, **KPI definition**, and **algorithmic optimisation** — critical for **Technical Product Managers**.
+* Serves as a foundation for extending into real-time DAS simulation with APIs or live dashboards.
 
-Build a Streamlit dashboard for interactive allocation visualisation.
+---
 
-Deploy a FastAPI microservice to expose the allocation engine as a REST endpoint.
+## 🚀 Future Enhancements
 
-📎 Author
+* Integrate **Google OR-Tools** or **PuLP** for linear programming optimisation.
+* Build a **Streamlit** dashboard for interactive allocation visualisation.
+* Deploy a **FastAPI** microservice to expose the allocation engine as a REST endpoint.
 
-Jessica Ofoh
-Technical PM | AI-Driven Product Manager
+---
+
+## 📎 Author
+
+**Jessica Ofoh**
+*Technical PM | AI-Driven Product Manager*
+
