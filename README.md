@@ -127,6 +127,5 @@ Export the following to `visuals/`:
 ---
 
 ## 📎 Author
-**Tony Ofoh**  
-Product Designer | Business Analyst | AI-Driven Product Manager  
-https://tonyofoh.com · https://linkedin.com/in/tony-ofoh
+**Jessica Ofoh**  
+Technical PM | AI-Driven Product Manager  
