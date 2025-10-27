@@ -1,4 +1,3 @@
-````markdown
 # 🧠 Dynamic Allocation Simulator  
 A Python-based optimisation engine demonstrating AI-driven decision logic for operational resource allocation.
 
@@ -30,11 +29,6 @@ The simulator applies classification logic (adapted from an image classifier) to
 - Synthetic dataset representing operational states (e.g., “available,” “busy,” “idle”).  
 - **NumPy** and **pandas** for data transformation and normalisation.  
 - Each state reframed as an “image class” to feed into the network.  
-
-```python
-df['normalised_load'] = (df['current_load'] - df['current_load'].min()) / (df['current_load'].max() - df['current_load'].min())
-features = np.array(df[['normalised_load', 'distance', 'priority']])
-````
 
 ---
 
